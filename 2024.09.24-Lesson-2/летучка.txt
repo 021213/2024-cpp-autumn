@@ -1,0 +1,67 @@
+2359
+
+#include<iostream>
+
+#include<cstdio>
+
+int a = 0;
+int b = 0;
+int c = a/b;	//плохо!
+int d = a / b;	//хорошо =)
+int e = (a - b) * c - d; // Ctrl+K,D
+IDE -> Integrated Development Environment
+
+&
+
+1. Даны две переменные. Поменять значение переменных местами. Без использования третьей переменной.
+
+// int c = a;
+// a = b;
+// b = c;
+
+2. Дано два натуральных числа. Вычислить максимум.
+
+
+#include<iostream>
+
+int main(int argc, char* argv[])
+{
+	int a = 0;
+	int b = 0;
+	scanf_s("%d", &a);
+	scanf_s("%d", &b);
+
+	int c = a;
+	a = b;
+	b = c;
+
+	a = a + b;
+	b = a - b;
+	a = a - b;
+
+	a = a * b;
+	b = a / b;
+	a = a / b;
+	
+	a = a ^ b;
+	b = a ^ b;
+	a = a ^ b;
+	
+	a ^= b ^= a ^= b;
+
+	int mn = (a * (b / a) + b * (a / b)) / (a / b + b / a);	
+	int mx = (b * (b / a) + a * (a / b)) / (a / b + b / a);	
+
+	return EXIT_SUCCESS;
+}
+
+
+
+
+
+
+
+
+
+
+
