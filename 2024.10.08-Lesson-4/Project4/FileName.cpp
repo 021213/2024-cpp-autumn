@@ -40,15 +40,15 @@ int main(int argc, char* argv[])
 	a[mx_ind] = a[mn_ind];
 	a[mn_ind] = c;
 
-	for (int i = 0; i < n; ++i) //1 + 1 + n + n + n*(1 + 1) + 1 = 4n + 3 = O(n)
+	for (int i = 0; i < n; ++i) // ??? 1 + 1 + n + n + n*(1 + 1) + 1 = 4n + 3 = O(n)
 	{
 		printf("%d ", a[i]);
 	}
 	printf("\n");
 
-	for (int i = 0; i < n; ++i)
+	for (int i = 0; i < n; ++i) // an^2 + bn + c = O(n^2)
 	{
-		for (int j = 0; j < n; ++j)
+		for (int j = 0; j < n - i; ++j)
 		{
 			if (a[i] < a[j])
 			{
